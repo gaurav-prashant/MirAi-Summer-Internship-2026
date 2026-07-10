@@ -31,7 +31,6 @@ if st.button("Transmit"):
         st.success(f"Transmission successful! Greetings, {user_name}. We received your message: {user_message}")
 
         #Advanced Challenge Token Cost Estimator
-
         char_count = len(user_message)
         token_count = char_count // 4
         st.info(f"System Check: Your message will consume approximately {token_count} tokens from our context window.")
