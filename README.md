@@ -44,14 +44,15 @@ Assignment 2
 An interactive AI chatbot built using **Python**, **Streamlit**, and the **Google Gemini API**. This application allows users to chat with multiple AI personalities, each responding with its own unique style and behavior.
 
 ## Features
+## ✨ Features
 
-  Multiple AI Personalities
-  Real-time Chat
-  Chat History
-  Secure API Integration
-  Powered by Gemini
-  Responsive Design
-  Robust Error Handling
+-  Multiple AI Personalities
+-  Real-time Chat
+-  Chat History
+-  Secure API Integration
+-  Powered by Gemini
+-  Responsive Design
+-  Robust Error Handling
 
 ## 🛠️ Tech Stack
 
