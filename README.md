@@ -1,3 +1,7 @@
+MirAI School of Technology - Virtual Summer Internship 2026
+
+Assignment 1
+
 The Identity Echo Interface
 
 A simple interactive web application built using Streamlit as part of the **MirAI School of Technology – Virtual Summer Internship 2026 (AI Builder Track)**.
