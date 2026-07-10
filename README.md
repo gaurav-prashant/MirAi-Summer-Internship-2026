@@ -35,12 +35,31 @@ The Identity Echo Interface collects a user's name and message, validates the in
 5. If both fields are valid:
    - Displays a personalized success message.
    - Calculates the message length.
-   - Estimates the number of AI tokens required.
+   - Estimates the number of AI tokens required.  
 
+Assignment 2
 
+#  AI Multiverse
 
+An interactive AI chatbot built using **Python**, **Streamlit**, and the **Google Gemini API**. This application allows users to chat with multiple AI personalities, each responding with its own unique style and behavior.
 
-Prashant Gaurav
+## Features
+
+  Multiple AI Personalities
+  Real-time Chat
+  Chat History
+  Secure API Integration
+  Powered by Gemini
+  Responsive Design
+  Robust Error Handling
+
+## 🛠️ Tech Stack
+
+- Python 3.13
+- Streamlit
+- Google Gemini API
+- python-dotenv
+
 
 GitHub: https://github.com/gaurav-prashant
 
