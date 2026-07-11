@@ -1,5 +1,6 @@
 import streamlit as st
-from google import genai
+from xai_sdk import Client
+from xai_sdk.chat import system, user
 from dotenv import load_dotenv
 import os
 
@@ -8,13 +9,13 @@ import os
 
 load_dotenv(override=True)
 
-api_key = os.getenv("GEMINI_API_KEY")
+api_key = os.getenv("XAI_API_KEY")
 
 if not api_key:
-    st.error("❌ GEMINI_API_KEY not found in .env file")
+    st.error("❌ XAI_API_KEY not found in .env file")
     st.stop()
 
-client = genai.Client(api_key=api_key)
+client = Client(api_key=api_key)
 
 # Page Config
 
@@ -95,10 +96,9 @@ Rules:
         with st.spinner("Thinking..."):
 
             models = [
-                "gemini-flash-latest",
-                "gemini-2.5-flash",
-                "gemini-2.5-flash-lite",
-                "gemini-2.0-flash"
+                "grok-4.5",
+                "grok-4.3",
+                "grok-4.20-non-reasoning",
             ]
 
             answer = None
@@ -107,12 +107,12 @@ Rules:
 
                 try:
 
-                    response = client.models.generate_content(
+                    chat = client.chat.create(
                         model=model_name,
-                        contents=f"{system_prompt}\n\nUser: {prompt}"
+                        messages=[system(system_prompt), user(prompt)],
                     )
 
-                    answer = response.text
+                    answer = chat.sample().content
                     break
 
                 except Exception as e:
@@ -123,7 +123,7 @@ Rules:
                         answer = " Quota exceeded. Please wait or use another API key."
                         break
 
-                    elif "401" in error or "API_KEY_INVALID" in error:
+                    elif "401" in error or "UNAUTHENTICATED" in error:
                         answer = " Invalid API Key."
                         break
 
@@ -138,7 +138,7 @@ Rules:
                         break
 
             if answer is None:
-                answer = "⚠️ All Gemini models are currently unavailable. Please try again later."
+                answer = "⚠️ All Grok models are currently unavailable. Please try again later."
 
         st.markdown(answer)
 
