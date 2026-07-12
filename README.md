@@ -41,7 +41,7 @@ Assignment 2
 
 #  AI Multiverse
 
-An interactive AI chatbot built using **Python**, **Streamlit**, and the **Google Gemini API**. This application allows users to chat with multiple AI personalities, each responding with its own unique style and behavior.
+An interactive AI chatbot built using **Python**, **Streamlit**, and the **Groq API**. This application allows users to chat with multiple AI personalities, each responding with its own unique style and behavior.
 
 ## Features
 ## ✨ Features
@@ -58,7 +58,7 @@ An interactive AI chatbot built using **Python**, **Streamlit**, and the **Googl
 
 - Python 3.13
 - Streamlit
-- Google Gemini API
+- Groq API
 - python-dotenv
 
 
