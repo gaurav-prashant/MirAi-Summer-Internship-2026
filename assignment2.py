@@ -1,24 +1,20 @@
 import streamlit as st
-from xai_sdk import Client
-from xai_sdk.chat import system, user
 from dotenv import load_dotenv
+from groq import Groq
 import os
 
-
 # Load API Key
-
 load_dotenv(override=True)
-
-api_key = os.getenv("XAI_API_KEY")
+api_key = os.getenv("GROQ_API_KEY")
 
 if not api_key:
-    st.error("❌ XAI_API_KEY not found in .env file")
+    st.error("❌ GROQ_API_KEY not found in .env file")
     st.stop()
 
-client = Client(api_key=api_key)
+# Initialize Groq client
+client = Groq(api_key=api_key)
 
 # Page Config
-
 st.set_page_config(
     page_title="🌍 AI Multiverse",
     page_icon="🌍",
@@ -26,10 +22,9 @@ st.set_page_config(
 )
 
 st.title("🌍 AI Multiverse")
-st.caption("Talk with different AI Personalities!")
+st.caption("Talk with different AI Personalities powered by Groq!")
 
 # Sidebar
-
 st.sidebar.title("🎭 Choose a Figure ")
 
 personality = st.sidebar.selectbox(
@@ -53,7 +48,6 @@ if st.sidebar.button("🗑 Clear Chat"):
     st.rerun()
 
 # Chat History
-
 if "messages" not in st.session_state:
     st.session_state.messages = []
 
@@ -96,49 +90,36 @@ Rules:
         with st.spinner("Thinking..."):
 
             models = [
-                "grok-4.5",
-                "grok-4.3",
-                "grok-4.20-non-reasoning",
+                "llama-3.3-70b-versatile",
+                "llama-3.1-8b-instant",
             ]
 
             answer = None
 
             for model_name in models:
-
                 try:
-
-                    chat = client.chat.create(
+                    chat_completion = client.chat.completions.create(
                         model=model_name,
-                        messages=[system(system_prompt), user(prompt)],
+                        messages=[
+                            {"role": "system", "content": system_prompt},
+                            {"role": "user", "content": prompt}
+                        ],
                     )
-
-                    answer = chat.sample().content
+                    answer = chat_completion.choices[0].message.content
                     break
-
                 except Exception as e:
-
                     error = str(e)
-
-                    if "429" in error:
-                        answer = " Quota exceeded. Please wait or use another API key."
-                        break
-
-                    elif "401" in error or "UNAUTHENTICATED" in error:
-                        answer = " Invalid API Key."
-                        break
-
-                    elif "503" in error:
+                    if "429" in error or "rate_limit" in error:
                         continue
-
-                    elif "404" in error:
-                        continue
-
+                    elif "401" in error or "unauthorized" in error:
+                        answer = "❌ Invalid Groq API Key."
+                        break
                     else:
-                        answer = error
+                        answer = f"⚠️ Groq API Error: {error}"
                         break
 
             if answer is None:
-                answer = "⚠️ All Grok models are currently unavailable. Please try again later."
+                answer = "⚠️ All Groq models are currently unavailable. Please try again later."
 
         st.markdown(answer)
 
