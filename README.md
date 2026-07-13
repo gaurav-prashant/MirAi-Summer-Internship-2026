@@ -61,29 +61,15 @@ An interactive AI chatbot built using **Python**, **Streamlit**, and the **Groq 
 - Groq API
 - python-dotenv
 
- # 🤖 AI Multiverse Chat Studio
+  Assignment 3
+
+  🤖 AI Multiverse Chat Studio
 
 A stateful AI chatbot built with **Streamlit** and the **Groq API** as part of the **MirAI School of Technology – Virtual Summer Internship 2026: The "AI Builder" Track**.
 
 This project upgrades the AI Multiverse Chatbot from a stateless application into a **stateful conversational chatbot** using Streamlit's `st.session_state`. The chatbot remembers the complete conversation history during the active session and supports multiple AI personalities and languages.
 
----
 
-## 📌 Assignment
-
-### The Memory Vault (Stateful Chatbot)
-
-The objective of this assignment is to solve the problem of conversation history being lost whenever a Streamlit application reruns.
-
-The application uses:
-
-```python
-st.session_state
-```
-
-to store and preserve user and assistant messages throughout the conversation.
-
----
 
 ## ✨ Features
 
@@ -161,7 +147,6 @@ st.session_state.messages.append(
 
 This creates a continuous conversation history.
 
----
 
 ## 🛠️ Technologies Used
 
@@ -173,207 +158,6 @@ This creates a continuous conversation history.
 - **HTML/CSS**
 - **Streamlit Session State**
 
----
-
-## 📂 Project Structure
-
-```text
-AI-Multiverse-Chat-Studio/
-│
-├── app.py
-├── personalities.py
-├── prompts.py
-├── utils.py
-├── style.css
-├── requirements.txt
-├── .env
-├── .gitignore
-└── README.md
-```
-
-> The `.env` file should never be uploaded to GitHub because it contains your private API key.
-
----
-
-## ⚙️ Installation and Setup
-
-### 1. Clone the Repository
-
-```bash
-git clone <your-repository-url>
-```
-
-Move into the project folder:
-
-```bash
-cd <your-project-folder>
-```
-
----
-
-### 2. Install Dependencies
-
-```bash
-pip install -r requirements.txt
-```
-
-If you do not have a `requirements.txt` file, install the required packages manually:
-
-```bash
-pip install streamlit groq python-dotenv
-```
-
----
-
-### 3. Configure the Groq API Key
-
-Create a `.env` file in the root directory:
-
-```env
-GROQ_API_KEY=your_actual_groq_api_key_here
-```
-
-Replace:
-
-```text
-your_actual_groq_api_key_here
-```
-
-with your actual Groq API key.
-
-> ⚠️ Never share or upload your actual API key to GitHub.
-
----
-
-### 4. Run the Application
-
-```bash
-streamlit run app.py
-```
-
-The application will open in your web browser.
-
----
-
-## 📝 Requirements File
-
-Your `requirements.txt` can contain:
-
-```text
-streamlit
-groq
-python-dotenv
-```
-
----
-
-## 🔒 Recommended `.gitignore`
-
-Create a `.gitignore` file and add:
-
-```text
-.env
-__pycache__/
-*.pyc
-.venv/
-venv/
-```
-
-This prevents your API key and unnecessary Python files from being uploaded to GitHub.
-
----
-
-## 🎯 Assignment Requirements Completed
-
-| Task | Requirement | Status |
-|------|-------------|--------|
-| Task 1 | Initialize `st.session_state.messages` | ✅ Completed |
-| Task 2 | Render previous chat history | ✅ Completed |
-| Task 3 | Replace old input UI with `st.chat_input()` | ✅ Completed |
-| Task 4 | Save user messages to memory | ✅ Completed |
-| Task 4 | Save assistant responses to memory | ✅ Completed |
-| Bonus | Send conversation history to the AI model | ✅ Completed |
-| Bonus | Multiple personalities and languages | ✅ Completed |
-
----
-
-## 🎥 Assignment Demonstration
-
-The screen recording demonstrates:
-
-1. Starting a conversation with the AI chatbot.
-2. Sending at least three continuous messages.
-3. Displaying all previous user and assistant messages.
-4. Demonstrating that the chatbot retains conversation history.
-5. Changing the personality or sidebar settings without wiping the visible chat history.
-
-### Example Conversation
-
-```text
-User: My name is Prashant.
-
-Assistant: Nice to meet you, Prashant!
-
-User: I am learning AI and Python.
-
-Assistant: That's great! AI and Python are a powerful combination.
-
-User: What is my name and what am I learning?
-
-Assistant: Your name is Prashant, and you are learning AI and Python.
-```
-
----
-
-## 📸 Screenshots
-
-Add your project screenshot inside a folder named `images`:
-
-```text
-images/
-└── chatbot-screenshot.png
-```
-
-Then display it in this README using:
-
-```markdown
-![AI Multiverse Chat Studio](images/chatbot-screenshot.png)
-```
-
----
-
-## 🚀 Future Improvements
-
-- Add a clear chat history button
-- Add persistent database storage
-- Add user authentication
-- Add more AI personalities
-- Add conversation export functionality
-- Add voice input and text-to-speech
-- Deploy the application online
-
----
-
-## 👨‍💻 Author
-
-**Prashant Kumar Gaurav**
-
-- GitHub: `gaurav-prashant`
-- Project: AI Multiverse Chat Studio
-- Internship: MirAI School of Technology – Virtual Summer Internship 2026
-- Track: The "AI Builder" Track
-
----
-
-## 📜 Acknowledgement
-
-This project was developed as part of the **MirAI School of Technology Virtual Summer Internship 2026 – The "AI Builder" Track**.
-
-The assignment focuses on understanding state management in Streamlit and building a continuous conversational AI experience using `st.session_state`.
-
----
-
-⭐ If you found this project useful, consider giving the repository a star!
 
 
 
