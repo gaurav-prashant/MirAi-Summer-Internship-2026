@@ -1,0 +1,214 @@
+/* ============================================================
+   AI Multiverse Chat Studio — Cosmic Deep Space Premium Theme
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap');
+
+/* ── Global Reset & Base ── */
+html, body, [class*="css"] {
+    font-family: 'Plus Jakarta Sans', 'Outfit', sans-serif;
+}
+
+.stApp {
+    background: radial-gradient(circle at 50% 20%, #161233 0%, #0a0718 60%, #03020a 100%);
+    min-height: 100vh;
+    color: #e2e8f0;
+}
+
+/* ── App Title ── */
+.app-title {
+    font-family: 'Outfit', sans-serif;
+    font-size: 2.8rem;
+    font-weight: 800;
+    background: linear-gradient(90deg, #00f2fe 0%, #4facfe 30%, #bd00ff 70%, #d800ff 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-align: center;
+    letter-spacing: -1px;
+    margin-bottom: 0.25rem;
+    text-shadow: 0 0 40px rgba(0, 242, 254, 0.2);
+    animation: pulseGlow 4s ease-in-out infinite alternate, fadeInDown 0.8s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+@keyframes pulseGlow {
+    0% { filter: drop-shadow(0 0 10px rgba(0, 242, 254, 0.1)); }
+    100% { filter: drop-shadow(0 0 25px rgba(189, 0, 255, 0.25)); }
+}
+
+@keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-24px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ── Subtitle / description text ── */
+.stApp p {
+    color: #94a3b8;
+    text-align: center;
+    font-weight: 400;
+}
+
+/* ── Chat message bubbles with Cosmic Glow ── */
+[data-testid="stChatMessage"] {
+    border-radius: 16px;
+    margin-bottom: 14px;
+    padding: 10px 16px;
+    backdrop-filter: blur(12px) saturate(180%);
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    animation: slideUp 0.4s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+/* User Message Bubble — Cosmic Violet Glass */
+[data-testid="stChatMessage"][data-testid*="user"] {
+    background: rgba(189, 0, 255, 0.05) !important;
+    border: 1px solid rgba(189, 0, 255, 0.25) !important;
+    box-shadow: 0 8px 32px 0 rgba(189, 0, 255, 0.05), inset 0 0 12px rgba(189, 0, 255, 0.1) !important;
+}
+
+/* Assistant Message Bubble — Cosmic Teal Glass */
+[data-testid="stChatMessage"][data-testid*="assistant"] {
+    background: rgba(0, 242, 254, 0.04) !important;
+    border: 1px solid rgba(0, 242, 254, 0.25) !important;
+    box-shadow: 0 8px 32px 0 rgba(0, 242, 254, 0.05), inset 0 0 12px rgba(0, 242, 254, 0.1) !important;
+}
+
+[data-testid="stChatMessage"]:hover {
+    transform: translateY(-2px);
+}
+
+@keyframes slideUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ── Chat input box ── */
+[data-testid="stChatInput"] {
+    background: transparent !important;
+}
+
+[data-testid="stChatInput"] textarea {
+    background: rgba(10, 7, 24, 0.7) !important;
+    backdrop-filter: blur(16px);
+    border: 1px solid rgba(0, 242, 254, 0.25) !important;
+    border-radius: 16px !important;
+    color: #f1f5f9 !important;
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3), inset 0 1px 1px rgba(255, 255, 255, 0.05);
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+[data-testid="stChatInput"] textarea:focus {
+    border-color: #00f2fe !important;
+    box-shadow: 0 0 20px rgba(0, 242, 254, 0.25), inset 0 0 8px rgba(0, 242, 254, 0.1) !important;
+}
+
+/* Send button styling */
+[data-testid="stChatInput"] button {
+    background: linear-gradient(135deg, #00f2fe, #bd00ff) !important;
+    color: white !important;
+    border-radius: 12px !important;
+    border: none !important;
+    transition: all 0.3s ease !important;
+}
+
+[data-testid="stChatInput"] button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(0, 242, 254, 0.5) !important;
+}
+
+/* ── Sidebar ── */
+[data-testid="stSidebar"] {
+    background: rgba(6, 4, 16, 0.95) !important;
+    border-right: 1px solid rgba(189, 0, 255, 0.15) !important;
+    backdrop-filter: blur(24px);
+    box-shadow: 10px 0 30px rgba(0, 0, 0, 0.5);
+}
+
+[data-testid="stSidebar"] .stSelectbox label,
+[data-testid="stSidebar"] p,
+[data-testid="stSidebar"] span {
+    color: #e2e8f0 !important;
+    font-weight: 500;
+}
+
+[data-testid="stSidebar"] [data-baseweb="select"] > div {
+    background: rgba(255, 255, 255, 0.03) !important;
+    border: 1px solid rgba(189, 0, 255, 0.25) !important;
+    border-radius: 10px !important;
+    color: #f1f5f9 !important;
+    transition: all 0.3s ease;
+}
+
+[data-testid="stSidebar"] [data-baseweb="select"] > div:hover {
+    border-color: #00f2fe !important;
+    box-shadow: 0 0 10px rgba(0, 242, 254, 0.2);
+}
+
+/* ── Setup / warning container ── */
+.setup-container {
+    background: rgba(189, 0, 255, 0.03);
+    border: 1px solid rgba(189, 0, 255, 0.25);
+    border-radius: 20px;
+    padding: 30px 36px;
+    margin-top: 24px;
+    box-shadow: 0 10px 40px rgba(189, 0, 255, 0.05);
+    animation: fadeIn 0.6s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.setup-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #00f2fe;
+    margin-bottom: 14px;
+    letter-spacing: -0.2px;
+}
+
+.setup-container p,
+.setup-container li {
+    color: #cbd5e1;
+    line-height: 1.8;
+}
+
+.setup-container code {
+    background: rgba(0, 242, 254, 0.08);
+    border: 1px solid rgba(0, 242, 254, 0.2);
+    border-radius: 8px;
+    padding: 3px 10px;
+    font-size: 0.88rem;
+    color: #00f2fe;
+}
+
+.setup-container a {
+    color: #bd00ff !important;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.setup-container a:hover {
+    color: #00f2fe !important;
+    text-shadow: 0 0 8px rgba(0, 242, 254, 0.3);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* ── Expander ── */
+[data-testid="stExpander"] {
+    background: rgba(255, 255, 255, 0.02) !important;
+    border: 1px solid rgba(189, 0, 255, 0.15) !important;
+    border-radius: 12px !important;
+}
+
+/* ── Scrollbar ── */
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: rgba(6, 4, 16, 0.5); }
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, rgba(0, 242, 254, 0.3), rgba(189, 0, 255, 0.3));
+    border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, #00f2fe, #bd00ff);
+}
