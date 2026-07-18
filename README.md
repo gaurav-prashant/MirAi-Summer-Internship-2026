@@ -158,30 +158,49 @@ This creates a continuous conversation history.
 - **HTML/CSS**
 - **Streamlit Session State**
 
-🎨 AI Image Studio - Assignment 4
-📌 Project Overview
-AI Image Studio is a Streamlit-based web application that generates AI-powered images from text prompts using the Pollinations AI API. This upgraded version includes enhanced user experience features and customizable image generation settings.
+# 🎨 AI Image Studio - Assignment 4
 
-✨ Features
-🎨 Multiple Art Styles
-📏 Custom Image Width & Height
-✨ Magic Enhance Option
-🎲 Surprise Me Feature
-📥 Download Generated Images (.png)
-🖼️ Interactive and User-Friendly Interface
-🛠️ Tech Stack
-Python
-Streamlit
-Requests
-Pollinations AI API
-▶️ How to Use
-Launch the Streamlit application.
-Choose your preferred art style.
-Adjust the image width and height.
-Enter an image prompt or click 🎲 Surprise Me!
-(Optional) Enable ✨ Magic Enhance for better-quality images.
-Click Generate Image.
-Download the generated image as a PNG file.
+AI Image Studio is a Streamlit-based web application that generates AI-powered images from text prompts using the Pollinations AI API. Users can customize image size, select different art styles, enhance prompts, and download generated images with an intuitive interface.
+
+## 🚀 Features
+
+- 🎨 Multiple Art Styles
+- 📏 Custom Image Width & Height
+- ✨ Magic Enhance Option
+- 🎲 Surprise Me Feature
+- 🖼️ AI Image Generation using Pollinations AI
+- 📥 Download Generated Images (.png)
+- 💻 Interactive & User-Friendly Interface
+
+
+## 🛠️ Tech Stack
+
+- Python
+- Streamlit
+- Requests
+- Pollinations AI API
+
+## 🎯 How to Use
+
+1. Launch the Streamlit application.
+2. Choose your preferred art style.
+3. Set the image width and height.
+4. Enter an image prompt.
+5. Or click **🎲 Surprise Me** to generate a random prompt.
+6. (Optional) Enable **✨ Magic Enhance** for better prompts.
+7. Click **Generate Image**.
+8. Download the generated image as a PNG file.
+
+---
+
+
+## 🎥 Demo Video
+https://drive.google.com/file/d/1aCunByTIeyaor9E5p5f-7WFHjokNqsM5/view?usp=drive_link
+
+
+
+
+
 
 
 
