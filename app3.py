@@ -104,3 +104,6 @@ if st.button("🎲 Surprise Me!"):
     st.info(f"Prompt: {random_prompt}")
 
     generate_image(random_prompt)
+    
+    #ASSIGNMENT 4
+    
