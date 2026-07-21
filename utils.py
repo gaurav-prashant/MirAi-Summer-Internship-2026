@@ -50,7 +50,8 @@ def render_sidebar(
     -------
     tuple[str, str, str, str]
         ``(personality_name, description, behavior, language)``
-    ""    with st.sidebar:
+    """
+    with st.sidebar:
         # ── Section header ──────────────────────────────────────────────────
         st.markdown(
             "<div style='text-align:center; padding: 12px 0 6px;'>"
