@@ -158,6 +158,48 @@ This creates a continuous conversation history.
 - **HTML/CSS**
 - **Streamlit Session State**
 
+# 🎨 AI Image Studio - Assignment 4
+
+AI Image Studio is a Streamlit-based web application that generates AI-powered images from text prompts using the Pollinations AI API. Users can customize image size, select different art styles, enhance prompts, and download generated images with an intuitive interface.
+
+## 🚀 Features
+
+- 🎨 Multiple Art Styles
+- 📏 Custom Image Width & Height
+- ✨ Magic Enhance Option
+- 🎲 Surprise Me Feature
+- 🖼️ AI Image Generation using Pollinations AI
+- 📥 Download Generated Images (.png)
+- 💻 Interactive & User-Friendly Interface
+
+
+## 🛠️ Tech Stack
+
+- Python
+- Streamlit
+- Requests
+- Pollinations AI API
+
+## 🎯 How to Use
+
+1. Launch the Streamlit application.
+2. Choose your preferred art style.
+3. Set the image width and height.
+4. Enter an image prompt.
+5. Or click **🎲 Surprise Me** to generate a random prompt.
+6. (Optional) Enable **✨ Magic Enhance** for better prompts.
+7. Click **Generate Image**.
+8. Download the generated image as a PNG file.
+
+---
+
+
+## 🎥 Demo Video
+https://drive.google.com/file/d/1aCunByTIeyaor9E5p5f-7WFHjokNqsM5/view?usp=drive_link
+
+
+
+
 
 
 
