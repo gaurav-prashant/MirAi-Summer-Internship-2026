@@ -197,6 +197,59 @@ AI Image Studio is a Streamlit-based web application that generates AI-powered i
 ## 🎥 Demo Video
 https://drive.google.com/file/d/1aCunByTIeyaor9E5p5f-7WFHjokNqsM5/view?usp=drive_link
 
+ASSIGNMENT 5
+ # 📖 AI Visual Novel Engine 
+
+An AI-powered interactive storytelling application built using **Streamlit**, **Groq Llama 3.3**, **Pollinations AI**, and **Google Text-to-Speech (gTTS)**. The application generates dynamic visual novel scenes with AI-generated narratives, scene artwork, voice narration, and multiple story choices.
+
+## 🚀 Features
+
+- 🤖 AI-generated interactive story using Groq Llama 3.3
+- 📚 Multiple story genres
+  - Cyberpunk
+  - Fantasy
+  - Sci-Fi
+  - Mystery
+  - Horror
+  - Steampunk
+  - Post-Apocalyptic
+- 🎨 Multiple AI art styles
+  - Anime
+  - Digital Art
+  - Pixel Art
+  - Cinematic Realism
+  - Oil Painting
+  - Watercolor
+  - Dark Fantasy
+- 🖼️ AI-generated scene illustrations using Pollinations AI
+- 🔊 Voice narration using Google Text-to-Speech (gTTS)
+- 🎮 Interactive choice-based gameplay
+- ⚙️ Modern responsive Streamlit interface
+- 🔄 Start a new adventure anytime
+- 
+
+## 🛠️ Technologies Used
+
+- Python
+- Streamlit
+- Groq API
+- Llama 3.3 70B Versatile
+- Pollinations AI
+- Google Text-to-Speech (gTTS)
+- Requests
+- JSON
+- Python Dotenv
+
+
+
+## 🎥 Demo Video
+
+Google Drive:
+
+https://drive.google.com/file/d/18tgyMrVfEuHGrAbJMK4ZMNUPiOuBngVK/view?usp=drive_link
+
+
+
 
 
 
